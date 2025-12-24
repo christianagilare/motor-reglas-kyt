@@ -6,12 +6,70 @@ package com.myspace.motor_reglas_kyt;
 
 public class DocumentoOrigenFondos implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public DocumentoOrigenFondos() {
-    }
+	@org.kie.api.definition.type.Label(value = "ID Documento")
+	private java.lang.String idDocumento;
+	@org.kie.api.definition.type.Label(value = "Fecha Firma")
+	private java.util.Date fechaFirma;
+	@org.kie.api.definition.type.Label(value = "Vigente")
+	private java.lang.Boolean vigente;
+	@org.kie.api.definition.type.Label(value = "Tipo Documento")
+	private java.lang.String tipoDocumento;
+	@org.kie.api.definition.type.Label(value = "Hash Blockchain")
+	private java.lang.String hashBlockchain;
 
+	public DocumentoOrigenFondos() {
+	}
 
+	public java.lang.String getIdDocumento() {
+		return this.idDocumento;
+	}
 
+	public void setIdDocumento(java.lang.String idDocumento) {
+		this.idDocumento = idDocumento;
+	}
+
+	public java.util.Date getFechaFirma() {
+		return this.fechaFirma;
+	}
+
+	public void setFechaFirma(java.util.Date fechaFirma) {
+		this.fechaFirma = fechaFirma;
+	}
+
+	public java.lang.Boolean getVigente() {
+		return this.vigente;
+	}
+
+	public void setVigente(java.lang.Boolean vigente) {
+		this.vigente = vigente;
+	}
+
+	public java.lang.String getTipoDocumento() {
+		return this.tipoDocumento;
+	}
+
+	public void setTipoDocumento(java.lang.String tipoDocumento) {
+		this.tipoDocumento = tipoDocumento;
+	}
+
+	public java.lang.String getHashBlockchain() {
+		return this.hashBlockchain;
+	}
+
+	public void setHashBlockchain(java.lang.String hashBlockchain) {
+		this.hashBlockchain = hashBlockchain;
+	}
+
+	public DocumentoOrigenFondos(java.lang.String idDocumento,
+			java.util.Date fechaFirma, java.lang.Boolean vigente,
+			java.lang.String tipoDocumento, java.lang.String hashBlockchain) {
+		this.idDocumento = idDocumento;
+		this.fechaFirma = fechaFirma;
+		this.vigente = vigente;
+		this.tipoDocumento = tipoDocumento;
+		this.hashBlockchain = hashBlockchain;
+	}
 
 }
