@@ -2,19 +2,74 @@
   <tableName>ValidacionMontoIndividual</tableName>
   <rowNumberCol>
     <hideColumn>false</hideColumn>
-    <width>-1</width>
+    <width>50</width>
   </rowNumberCol>
   <descriptionCol>
     <hideColumn>false</hideColumn>
-    <width>-1</width>
+    <width>150</width>
   </descriptionCol>
   <ruleNameColumn>
     <hideColumn>true</hideColumn>
-    <width>-1</width>
+    <width>150</width>
   </ruleNameColumn>
   <metadataCols/>
   <attributeCols/>
-  <conditionPatterns/>
+  <conditionPatterns>
+    <Pattern52>
+      <factType>Cliente</factType>
+      <boundName>$cliente</boundName>
+      <isNegated>false</isNegated>
+      <conditions>
+        <condition-column52>
+          <typedDefaultValue>
+            <valueString></valueString>
+            <dataType>STRING</dataType>
+            <isOtherwise>false</isOtherwise>
+          </typedDefaultValue>
+          <hideColumn>false</hideColumn>
+          <width>272</width>
+          <header>Tipo Cliente BRE</header>
+          <constraintValueType>1</constraintValueType>
+          <factField>tipoClienteBRE</factField>
+          <fieldType>String</fieldType>
+          <operator>==</operator>
+          <parameters/>
+          <binding></binding>
+        </condition-column52>
+      </conditions>
+      <window>
+        <parameters/>
+      </window>
+      <entryPointName></entryPointName>
+    </Pattern52>
+    <Pattern52>
+      <factType>Transaccion</factType>
+      <boundName>$transaccion</boundName>
+      <isNegated>false</isNegated>
+      <conditions>
+        <condition-column52>
+          <typedDefaultValue>
+            <valueString></valueString>
+            <dataType>NUMERIC_BIGDECIMAL</dataType>
+            <isOtherwise>false</isOtherwise>
+          </typedDefaultValue>
+          <hideColumn>false</hideColumn>
+          <width>230</width>
+          <header>Monto &gt;= Umbral</header>
+          <constraintValueType>1</constraintValueType>
+          <factField>montoTransaccion</factField>
+          <fieldType>BigDecimal</fieldType>
+          <operator>&gt;=</operator>
+          <parameters/>
+          <binding></binding>
+        </condition-column52>
+      </conditions>
+      <window>
+        <parameters/>
+      </window>
+      <entryPointName></entryPointName>
+    </Pattern52>
+  </conditionPatterns>
   <actionCols/>
   <auditLog>
     <filter class="org.drools.guvnor.client.modeldriven.dt52.auditlog.DecisionTableAuditLogFilter">
