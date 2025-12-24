@@ -6,12 +6,72 @@ package com.myspace.motor_reglas_kyt;
 
 public class Transaccion implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Transaccion() {
-    }
+	@org.kie.api.definition.type.Label(value = "ID Transacción")
+	private java.lang.String idTransaccion;
+	@org.kie.api.definition.type.Label(value = "Monto Transacción")
+	private java.math.BigDecimal montoTransaccion;
+	@org.kie.api.definition.type.Label(value = "Monto Acumulado")
+	private java.math.BigDecimal montoAcumulado;
+	@org.kie.api.definition.type.Label(value = "Fecha Transacción")
+	private java.util.Date fechaTransaccion;
+	@org.kie.api.definition.type.Label(value = "Cliente")
+	private com.myspace.motor_reglas_kyt.Cliente cliente;
 
+	public Transaccion() {
+	}
 
+	public java.lang.String getIdTransaccion() {
+		return this.idTransaccion;
+	}
 
+	public void setIdTransaccion(java.lang.String idTransaccion) {
+		this.idTransaccion = idTransaccion;
+	}
+
+	public java.math.BigDecimal getMontoTransaccion() {
+		return this.montoTransaccion;
+	}
+
+	public void setMontoTransaccion(java.math.BigDecimal montoTransaccion) {
+		this.montoTransaccion = montoTransaccion;
+	}
+
+	public java.math.BigDecimal getMontoAcumulado() {
+		return this.montoAcumulado;
+	}
+
+	public void setMontoAcumulado(java.math.BigDecimal montoAcumulado) {
+		this.montoAcumulado = montoAcumulado;
+	}
+
+	public java.util.Date getFechaTransaccion() {
+		return this.fechaTransaccion;
+	}
+
+	public void setFechaTransaccion(java.util.Date fechaTransaccion) {
+		this.fechaTransaccion = fechaTransaccion;
+	}
+
+	public com.myspace.motor_reglas_kyt.Cliente getCliente() {
+		return this.cliente;
+	}
+
+	public void setCliente(com.myspace.motor_reglas_kyt.Cliente cliente) {
+		this.cliente = cliente;
+	}
+
+	public Transaccion(java.lang.String idTransaccion,
+			java.math.BigDecimal montoTransaccion,
+			java.math.BigDecimal montoAcumulado,
+			java.util.Date fechaTransaccion,
+			com.myspace.motor_reglas_kyt.Cliente cliente) {
+		this.idTransaccion = idTransaccion;
+		this.montoTransaccion = montoTransaccion;
+		this.montoAcumulado = montoAcumulado;
+		this.fechaTransaccion = fechaTransaccion;
+		this.cliente = cliente;
+	}
 
 }
