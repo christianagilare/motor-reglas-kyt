@@ -1,2 +1,23 @@
 package com.myspace.motor_reglas_kyt;
 
+import com.kyt.modelo.DocumentoOrigenFondos;
+import java.util.Date;
+import java.util.concurrent.TimeUnit;
+
+rule "Verificar Vigencia Documento"
+    ruleflow-group "vigencia-documentos"
+    when
+        $doc : DocumentoOrigenFondos(fechaFirma != null)
+    then
+        Date ahora = new Date();
+        long diff = ahora.getTime() - $doc.getFechaFirma().getTime();
+        long meses = TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS) / 30;
+        
+        if (meses < 6) {
+            $doc.setVigente(true);
+        } else {
+            $doc.setVigente(false);
+        }
+        
+        update($doc);
+end
