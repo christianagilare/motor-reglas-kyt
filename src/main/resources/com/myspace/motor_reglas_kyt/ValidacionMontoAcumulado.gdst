@@ -118,7 +118,7 @@
         <isOtherwise>false</isOtherwise>
       </typedDefaultValue>
       <hideColumn>false</hideColumn>
-      <width>189</width>
+      <width>148</width>
       <header>Código Regla</header>
       <factType>ResultadoValidacion</factType>
       <boundName>$resultado</boundName>
@@ -133,7 +133,7 @@
         <isOtherwise>false</isOtherwise>
       </typedDefaultValue>
       <hideColumn>false</hideColumn>
-      <width>163</width>
+      <width>140</width>
       <header>Hay Excepción</header>
       <factType>ResultadoValidacion</factType>
       <boundName>$resultado</boundName>
@@ -148,7 +148,7 @@
         <isOtherwise>false</isOtherwise>
       </typedDefaultValue>
       <hideColumn>false</hideColumn>
-      <width>164</width>
+      <width>150</width>
       <header>Requiere Documento</header>
       <factType>ResultadoValidacion</factType>
       <boundName>$resultado</boundName>
@@ -163,7 +163,7 @@
         <isOtherwise>false</isOtherwise>
       </typedDefaultValue>
       <hideColumn>false</hideColumn>
-      <width>176</width>
+      <width>126</width>
       <header>Tipo Documento</header>
       <factType>ResultadoValidacion</factType>
       <boundName>$resultado</boundName>
