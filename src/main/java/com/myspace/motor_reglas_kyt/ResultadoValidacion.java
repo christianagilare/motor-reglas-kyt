@@ -6,12 +6,94 @@ package com.myspace.motor_reglas_kyt;
 
 public class ResultadoValidacion implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public ResultadoValidacion() {
-    }
+	@org.kie.api.definition.type.Label(value = "Código Regla")
+	private java.lang.String codigoRegla;
+	@org.kie.api.definition.type.Label(value = "Requiere Documento")
+	private java.lang.Boolean requiereDocumento;
+	@org.kie.api.definition.type.Label(value = "Tipo Documento")
+	private java.lang.String tipoDocumento;
+	@org.kie.api.definition.type.Label(value = "Hay Excepción")
+	private java.lang.Boolean hayExcepcion;
+	@org.kie.api.definition.type.Label(value = "Acción")
+	private java.lang.String accion;
+	@org.kie.api.definition.type.Label(value = "Mensaje")
+	private java.lang.String mensaje;
+	@org.kie.api.definition.type.Label(value = "Aprobado")
+	private java.lang.Boolean aprobado;
 
+	public ResultadoValidacion() {
+	}
 
+	public java.lang.String getCodigoRegla() {
+		return this.codigoRegla;
+	}
 
+	public void setCodigoRegla(java.lang.String codigoRegla) {
+		this.codigoRegla = codigoRegla;
+	}
+
+	public java.lang.Boolean getRequiereDocumento() {
+		return this.requiereDocumento;
+	}
+
+	public void setRequiereDocumento(java.lang.Boolean requiereDocumento) {
+		this.requiereDocumento = requiereDocumento;
+	}
+
+	public java.lang.String getTipoDocumento() {
+		return this.tipoDocumento;
+	}
+
+	public void setTipoDocumento(java.lang.String tipoDocumento) {
+		this.tipoDocumento = tipoDocumento;
+	}
+
+	public java.lang.Boolean getHayExcepcion() {
+		return this.hayExcepcion;
+	}
+
+	public void setHayExcepcion(java.lang.Boolean hayExcepcion) {
+		this.hayExcepcion = hayExcepcion;
+	}
+
+	public java.lang.String getAccion() {
+		return this.accion;
+	}
+
+	public void setAccion(java.lang.String accion) {
+		this.accion = accion;
+	}
+
+	public java.lang.String getMensaje() {
+		return this.mensaje;
+	}
+
+	public void setMensaje(java.lang.String mensaje) {
+		this.mensaje = mensaje;
+	}
+
+	public java.lang.Boolean getAprobado() {
+		return this.aprobado;
+	}
+
+	public void setAprobado(java.lang.Boolean aprobado) {
+		this.aprobado = aprobado;
+	}
+
+	public ResultadoValidacion(java.lang.String codigoRegla,
+			java.lang.Boolean requiereDocumento,
+			java.lang.String tipoDocumento, java.lang.Boolean hayExcepcion,
+			java.lang.String accion, java.lang.String mensaje,
+			java.lang.Boolean aprobado) {
+		this.codigoRegla = codigoRegla;
+		this.requiereDocumento = requiereDocumento;
+		this.tipoDocumento = tipoDocumento;
+		this.hayExcepcion = hayExcepcion;
+		this.accion = accion;
+		this.mensaje = mensaje;
+		this.aprobado = aprobado;
+	}
 
 }
