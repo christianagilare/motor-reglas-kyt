@@ -1,6 +1,6 @@
 package com.myspace.motor_reglas_kyt;
 
-import com.kyt.modelo.DocumentoOrigenFondos;
+import com.myspace.motor_reglas_kyt.DocumentoOrigenFondos;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
