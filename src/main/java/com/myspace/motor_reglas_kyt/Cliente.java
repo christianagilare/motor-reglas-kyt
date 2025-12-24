@@ -6,12 +6,47 @@ package com.myspace.motor_reglas_kyt;
 
 public class Cliente implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Cliente() {
-    }
+	@org.kie.api.definition.type.Label(value = "Tipo Cliente BRE")
+	private java.lang.String tipoClienteBRE;
+	@org.kie.api.definition.type.Label(value = "Tipo Cliente Formulario")
+	private java.lang.String tipoClienteFormulario;
+	@org.kie.api.definition.type.Label(value = "Código")
+	private java.lang.String codigo;
 
+	public Cliente() {
+	}
 
+	public java.lang.String getTipoClienteBRE() {
+		return this.tipoClienteBRE;
+	}
 
+	public void setTipoClienteBRE(java.lang.String tipoClienteBRE) {
+		this.tipoClienteBRE = tipoClienteBRE;
+	}
+
+	public java.lang.String getTipoClienteFormulario() {
+		return this.tipoClienteFormulario;
+	}
+
+	public void setTipoClienteFormulario(java.lang.String tipoClienteFormulario) {
+		this.tipoClienteFormulario = tipoClienteFormulario;
+	}
+
+	public java.lang.String getCodigo() {
+		return this.codigo;
+	}
+
+	public void setCodigo(java.lang.String codigo) {
+		this.codigo = codigo;
+	}
+
+	public Cliente(java.lang.String tipoClienteBRE,
+			java.lang.String tipoClienteFormulario, java.lang.String codigo) {
+		this.tipoClienteBRE = tipoClienteBRE;
+		this.tipoClienteFormulario = tipoClienteFormulario;
+		this.codigo = codigo;
+	}
 
 }
