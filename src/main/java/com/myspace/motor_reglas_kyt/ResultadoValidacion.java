@@ -8,20 +8,23 @@ public class ResultadoValidacion implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "Código Regla")
+	@org.kie.api.definition.type.Label("Código Regla")
 	private java.lang.String codigoRegla;
-	@org.kie.api.definition.type.Label(value = "Requiere Documento")
+	@org.kie.api.definition.type.Label("Requiere Documento")
 	private java.lang.Boolean requiereDocumento;
-	@org.kie.api.definition.type.Label(value = "Tipo Documento")
+	@org.kie.api.definition.type.Label("Tipo Documento")
 	private java.lang.String tipoDocumento;
-	@org.kie.api.definition.type.Label(value = "Hay Excepción")
+	@org.kie.api.definition.type.Label("Hay Excepción")
 	private java.lang.Boolean hayExcepcion;
-	@org.kie.api.definition.type.Label(value = "Acción")
+	@org.kie.api.definition.type.Label("Acción")
 	private java.lang.String accion;
-	@org.kie.api.definition.type.Label(value = "Mensaje")
+	@org.kie.api.definition.type.Label("Mensaje")
 	private java.lang.String mensaje;
-	@org.kie.api.definition.type.Label(value = "Aprobado")
+	@org.kie.api.definition.type.Label("Aprobado")
 	private java.lang.Boolean aprobado;
+
+	@org.kie.api.definition.type.Label(value = "Validacion Inicializado")
+	private java.lang.Boolean inicializado;
 
 	public ResultadoValidacion() {
 	}
@@ -82,11 +85,19 @@ public class ResultadoValidacion implements java.io.Serializable {
 		this.aprobado = aprobado;
 	}
 
+	public java.lang.Boolean getInicializado() {
+		return this.inicializado;
+	}
+
+	public void setInicializado(java.lang.Boolean inicializado) {
+		this.inicializado = inicializado;
+	}
+
 	public ResultadoValidacion(java.lang.String codigoRegla,
 			java.lang.Boolean requiereDocumento,
 			java.lang.String tipoDocumento, java.lang.Boolean hayExcepcion,
 			java.lang.String accion, java.lang.String mensaje,
-			java.lang.Boolean aprobado) {
+			java.lang.Boolean aprobado, java.lang.Boolean inicializado) {
 		this.codigoRegla = codigoRegla;
 		this.requiereDocumento = requiereDocumento;
 		this.tipoDocumento = tipoDocumento;
@@ -94,6 +105,7 @@ public class ResultadoValidacion implements java.io.Serializable {
 		this.accion = accion;
 		this.mensaje = mensaje;
 		this.aprobado = aprobado;
+		this.inicializado = inicializado;
 	}
 
 }

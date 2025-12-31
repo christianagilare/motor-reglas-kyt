@@ -6,18 +6,15 @@ import java.util.concurrent.TimeUnit;
 
 rule "Verificar Vigencia Documento"
     ruleflow-group "vigencia-documentos"
-    when
-        $doc : DocumentoOrigenFondos(fechaFirma != null)
-    then
-        Date ahora = new Date();
-        long diff = ahora.getTime() - $doc.getFechaFirma().getTime();
-        long meses = TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS) / 30;
-        
-        if (meses < 6) {
-            $doc.setVigente(true);
-        } else {
-            $doc.setVigente(false);
-        }
-        
-        update($doc);
+    no-loop true
+when
+    $doc : DocumentoOrigenFondos(fechaFirma != null)
+then
+    Date ahora = new Date();
+    long diff = ahora.getTime() - $doc.getFechaFirma().getTime();
+    long meses = TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS) / 30;
+
+    $doc.setVigente(meses < 6);
+
+    update($doc);
 end

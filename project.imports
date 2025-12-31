@@ -25,6 +25,18 @@
       <import>
         <type>java.util.ArrayList</type>
       </import>
+      <import>
+        <type>com.myspace.motor_reglas_kyt.Cliente</type>
+      </import>
+      <import>
+        <type>com.myspace.motor_reglas_kyt.Transaccion</type>
+      </import>
+      <import>
+        <type>com.myspace.motor_reglas_kyt.ResultadoValidacion</type>
+      </import>
+      <import>
+        <type>com.myspace.motor_reglas_kyt.DocumentoOrigenFondos</type>
+      </import>
     </imports>
   </imports>
   <version>1.0</version>
